@@ -14,7 +14,7 @@ __thisHeight = 650
 splash_root = Tk()
 splash_root.configure(background='#6A6AC2')
 
-background_image=tk.PhotoImage(file = "i used a gameboy pic :D")
+background_image=tk.PhotoImage(file = "gameboy_pic")
 background_label = tk.Label(splash_root, image=background_image)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -31,8 +31,8 @@ left = (screenWidth / 2) - (__thisWidth / 2)
 # For right-align
 top = (screenHeight / 2) - (__thisHeight / 2)
 
-splash_root.geometry('%dx%d+%d+%d' % (__thisWidth,
-                                      __thisHeight- 50,
+splash_root.geometry('%dx%d+%d+%d' % (__thisWidth-51,
+                                      __thisHeight- 70,
                                       left, top))  # this expression centers the main window + resizes it
 
 #splash_root.eval('tk::PlaceWindow . center') is another way
@@ -83,7 +83,7 @@ class Notepad:
     __thisWidth = 700
     __thisHeight = 500
 
-    __thisTextArea = Text(__root, bg = "#7A706E", cursor = "cross", highlightcolor= "#7A709E") #text widget with the parent window "__root"
+    __thisTextArea = Text(__root, cursor = "cross", highlightcolor= "#7A709E") #text widget with the parent window "__root"
     __thisMenuBar = Menu(__root)
 
     __thisFileMenu = Menu(__thisMenuBar, tearoff=0)
